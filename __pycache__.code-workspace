@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../__pycache__"
+		},
+		{
+			"path": "../data_chunks"
+		},
+		{
+			"path": "../excel_data"
+		}
+	]
+}

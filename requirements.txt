@@ -1,0 +1,6 @@
+openpyxl==3.1.5
+python-calamine==0.8.2
+psycopg[binary]==3.3.6
+pytest==9.1.1
+flake8==7.4.1
+black==26.5.1

@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Virtual environments and local settings
+.venv/
+venv/
+.env
+.env.*
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Data files (never commit the benchmark dataset)
+*.xlsx
+*.xlsm
+*.xls
+*.csv
+*.parquet
+*.db
+*.sqlite
+*.sqlite3
+
+# Benchmark output and temporary data directories
+benchmark_report*.json
+benchmark_results/
+reports/
+data/
+excel_data/
+data_chunks/
+test_data/
+tmp/
+temp/

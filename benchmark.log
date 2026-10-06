@@ -1,0 +1,52 @@
+2026-10-06 17:53:28 ERROR   MainProcess: FileNotFoundError: Input directory not found: D:\2TB_DATA
+2026-10-06 18:00:48 ERROR   MainProcess: FileNotFoundError: Input directory not found: D:\2TB_DATA
+2026-10-06 18:04:24 ERROR   MainProcess: OperationalError: connection failed: connection to server at "127.0.0.1", port 5432 failed: fe_sendauth: no password supplied Multiple connection attempts failed. All failures were: - host: 'localhost', port: 5432, hostaddr: '::1': connection failed: connection to server at "::1", port 5432 failed: fe_sendauth: no password supplied - host: 'localhost', port: 5432, hostaddr: '127.0.0.1': connection failed: connection to server at "127.0.0.1", port 5432 failed: fe_sendauth: no password supplied
+2026-10-06 18:05:34 INFO    MainProcess: Created table my_target_table (id bigint, name text, amount double precision)
+2026-10-06 18:05:34 WARNING MainProcess: Truncated my_target_table and cleared its load checkpoints
+2026-10-06 18:05:34 INFO    MainProcess: Loading 4 workbooks (6.32 MB) into my_target_table: engine=calamine, workers=4, batch size=50,000
+2026-10-06 18:05:38 INFO    SpawnProcess-4: dataset_part_01.xlsx [Data_Sheet_1]: loaded 50,000 rows in 1 batches, 1.8s (28,281 rows/s)
+2026-10-06 18:05:38 INFO    SpawnProcess-3: dataset_part_02.xlsx [Data_Sheet_1]: loaded 50,000 rows in 1 batches, 1.8s (27,899 rows/s)
+2026-10-06 18:05:38 INFO    SpawnProcess-2: dataset_part_04.xlsx [Data_Sheet_1]: loaded 50,000 rows in 1 batches, 1.8s (28,453 rows/s)
+2026-10-06 18:05:38 INFO    SpawnProcess-1: dataset_part_03.xlsx [Data_Sheet_1]: loaded 50,000 rows in 1 batches, 1.8s (28,364 rows/s)
+2026-10-06 18:05:40 INFO    SpawnProcess-4: dataset_part_01.xlsx [Data_Sheet_2]: loaded 50,000 rows in 1 batches, 1.9s (26,575 rows/s)
+2026-10-06 18:05:40 INFO    MainProcess: [1/4] dataset_part_01.xlsx: 100,000 rows in 3.8s | total 100,000 rows, 1.57 MB, 218.55 KB/s, 13,929 rows/s, ETA 00h 00m 21.76s
+2026-10-06 18:05:40 INFO    SpawnProcess-1: dataset_part_03.xlsx [Data_Sheet_2]: loaded 50,000 rows in 1 batches, 1.8s (27,782 rows/s)
+2026-10-06 18:05:40 INFO    MainProcess: [2/4] dataset_part_03.xlsx: 100,000 rows in 3.8s | total 200,000 rows, 3.15 MB, 427.61 KB/s, 27,115 rows/s, ETA 00h 00m 07.41s
+2026-10-06 18:05:40 INFO    SpawnProcess-3: dataset_part_02.xlsx [Data_Sheet_2]: loaded 50,000 rows in 1 batches, 2.0s (25,367 rows/s)
+2026-10-06 18:05:40 INFO    MainProcess: [3/4] dataset_part_02.xlsx: 100,000 rows in 4.0s | total 300,000 rows, 4.74 MB, 642.41 KB/s, 40,667 rows/s, ETA 00h 00m 02.47s
+2026-10-06 18:05:40 INFO    SpawnProcess-2: dataset_part_04.xlsx [Data_Sheet_2]: loaded 50,000 rows in 1 batches, 1.9s (26,643 rows/s)
+2026-10-06 18:05:40 INFO    MainProcess: [4/4] dataset_part_04.xlsx: 100,000 rows in 3.9s | total 400,000 rows, 6.32 MB, 850.42 KB/s, 53,790 rows/s, ETA 00h 00m 00.00s
+2026-10-06 18:05:41 INFO    MainProcess: Benchmark finished
+================================================================
+EXCEL TO POSTGRESQL BENCHMARK
+================================================================
+Start Time        : 2026-10-06 18:05:33+05:30
+End Time          : 2026-10-06 18:05:41+05:30
+Execution Time    : 00h 00m 07.69s (7.69 seconds)
+Files Processed   : 4 of 4
+Sheets Processed  : 8
+Rows Processed    : 400,000
+Data Processed    : 6.32 MB (6,324,049 bytes)
+Throughput        : 822.65 KB/s
+Rows/Second       : 52,033
+Successful Batches: 8
+Failed Batches    : 0
+----------------------------------------------------------------
+Rows Rejected     : 0
+Sheets Failed     : 0
+Sheets Skipped    : 0 (loaded by an earlier run)
+Files Failed      : 0
+Target Table      : my_target_table
+Table Growth      : 24.14 MB
+Engine            : calamine
+Workers           : 4
+Batch Size        : 50,000 rows
+================================================================
+RESULT: ACTUAL for the dataset above. 2 TB figures below are PROJECTED.
+Tested Dataset    : 6.32 MB (0.0003% of 2 TB) - Actual
+2 TB Load Time    : 28d 03h 19m 26.68s at 822.65 KB/s - Projected
+2 TB Row Count    : ~126,501,233,624 - Projected
+2 TB Table Size   : ~7.63 TB in PostgreSQL - Projected
+Projections assume the measured throughput stays constant.
+================================================================
+2026-10-06 18:05:41 INFO    MainProcess: Benchmark report written to benchmark_report.json
